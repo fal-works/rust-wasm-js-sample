@@ -1,0 +1,19 @@
+{
+  "editor.tabSize": 4,
+  "editor.codeActionsOnSave": {
+    "source.sortImports": true
+  },
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "[markdown]": {
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": false
+  },
+  "[plaintext]": {
+    "files.trimTrailingWhitespace": false,
+    "files.trimFinalNewlines": false,
+    "files.insertFinalNewline": false,
+  }
+}

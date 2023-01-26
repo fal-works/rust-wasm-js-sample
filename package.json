@@ -1,0 +1,23 @@
+{
+    "name": "rust-wasm-js-sample",
+    "license": "CC0-1.0",
+    "type": "module",
+    "main": "src/js/index.js",
+    "dependencies": {
+        "wasm-sample": "./lib/wasm-sample"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "esbuild": "^0.17.4",
+        "esbuild-plugin-wasm": "^1.0.0",
+        "serve": "^14.2.0"
+    },
+    "scripts": {
+        "build:wasm": "npm run build:wasm:node && npm run build:wasm:web",
+        "build:wasm:node": "node scripts/clean.js --wasm-node && wasm-pack build --out-name index --target nodejs --out-dir lib/wasm-sample/node",
+        "build:wasm:web": "node scripts/clean.js --wasm-web && wasm-pack build --out-name index --target bundler --out-dir lib/wasm-sample/web",
+        "build:js:web": "node scripts/clean.js --js-web && node scripts/bundle.js",
+        "start:node": "node src/js/index.js",
+        "start:web": "serve"
+    }
+}

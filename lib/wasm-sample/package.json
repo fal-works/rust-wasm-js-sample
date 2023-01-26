@@ -1,0 +1,8 @@
+{
+    "name": "wasm-sample",
+    "description": "WASM sample built from Rust source code.",
+    "license": "CC0-1.0",
+    "main": "./node/index.js",
+    "browser": "./web/index.js",
+    "private": "true"
+}
